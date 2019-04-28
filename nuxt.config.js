@@ -1,5 +1,6 @@
 import pkg from './package'
 
+var exports;
 export default {
   mode: 'spa',
 
@@ -34,13 +35,15 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/components'
   ],
 
   /*
   ** Nuxt.js modules
   */
-  modules: [
-  ],
+    modules: [
+      ['storyblok-nuxt', {accessToken: 'ambskM1BXiM02UpnfbINkQtt', cacheProvider: 'memory'}]
+    ],
 
   /*
   ** Build configuration
